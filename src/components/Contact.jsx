@@ -27,7 +27,7 @@ const Contact = () => {
                <span className="text-sm text-slate-400 group-hover:text-sky-400 transition-colors">Email Me</span>
             </a>
             
-            <a href="https://linkedin.com/in/nirdesh-khanal" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3">
+            <a href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3">
                <div className="p-4 rounded-full glass-card hover:bg-purple-500/20 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300 ring-1 ring-white/10 group-hover:ring-purple-500/50">
                  <Linkedin className="w-6 h-6 text-slate-300 group-hover:text-purple-400 transition-colors" />
                </div>
