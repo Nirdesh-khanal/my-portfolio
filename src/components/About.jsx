@@ -19,18 +19,12 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white relative z-10">About Me</h2>
             <div className="space-y-4 text-slate-300 leading-relaxed relative z-10">
               <p>
-                I'm a Full-Stack developer with a strong foundation in modern web technologies including React, Python, and Django. 
-                My journey involves solving real-world problems through code, from budget trackers to immersive web applications.
-              </p>
+                I'm a Full-Stack Developer who enjoys building things that live on the internet. I work primarily with React, Python, and Django, turning ideas into practical web applications — from simple tools like budget trackers to more complex interactive platforms.              </p>
               <p>
-                What drives me is the constant pursuit of learning. Whether it's mastering a new framework or optimizing legacy code, 
-                I approach every challenge with passion and practicality.
+                I’m driven by curiosity and the challenge of solving problems. I’m always learning, whether it’s picking up a new framework, understanding system architecture, or just figuring out why something broke. I try to keep my code clean and my approach practical.
               </p>
-              <p>
-                When I'm not coding, you can find me exploring virtual worlds. I'm an avid gamer who enjoys the strategic depth of 
-                <span className="text-sky-400 font-semibold drop-shadow-[0_0_8px_rgba(56,189,248,0.5)]"> Genshin Impact</span>, the fast-paced action of <span className="text-sky-400 font-semibold">Free Fire</span>, 
-                and the social deduction of <span className="text-sky-400 font-semibold">Among Us</span>. Gaming keeps my problem-solving skills sharp and my creativity flowing.
-              </p>
+              <p>For me, coding is not just about writing software; it's about solving problems and continuously improving along the way.
+               </p>
             </div>
           </div>
           
