@@ -1,54 +1,69 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, Terminal } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-slate-900/0 relative">
+    <section id="contact" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-4xl"
         >
-          <span className="text-sky-400 font-semibold tracking-wider text-sm uppercase mb-2 block drop-shadow-[0_0_10px_rgba(56,189,248,0.5)]">Get in Touch</span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">Let's Build Something Together</h2>
-          <p className="text-slate-300 text-lg mb-12 max-w-2xl mx-auto">
-            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, 
-            I'll try my best to get back to you!
-          </p>
-          
-          <div className="flex flex-row gap-8 justify-center mb-16">
-            <a href="mailto:khanalnirdsh0003@gmail.com" className="group flex flex-col items-center gap-3">
-               <div className="p-4 rounded-full glass-card hover:bg-sky-500/20 hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all duration-300 ring-1 ring-white/10 group-hover:ring-sky-500/50">
-                 <Mail className="w-6 h-6 text-slate-300 group-hover:text-sky-400 transition-colors" />
-               </div>
-               <span className="text-sm text-slate-400 group-hover:text-sky-400 transition-colors">Email Me</span>
-            </a>
-            
-            <a href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3">
-               <div className="p-4 rounded-full glass-card hover:bg-purple-500/20 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300 ring-1 ring-white/10 group-hover:ring-purple-500/50">
-                 <Linkedin className="w-6 h-6 text-slate-300 group-hover:text-purple-400 transition-colors" />
-               </div>
-               <span className="text-sm text-slate-400 group-hover:text-purple-400 transition-colors">LinkedIn</span>
-            </a>
-
-            <a href="https://github.com/nirdesh-khanal" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3">
-               <div className="p-4 rounded-full glass-card hover:bg-green-500/20 hover:shadow-[0_0_20px_rgba(74,222,128,0.4)] transition-all duration-300 ring-1 ring-white/10 group-hover:ring-green-500/50">
-                 <Github className="w-6 h-6 text-slate-300 group-hover:text-green-400 transition-colors" />
-               </div>
-               <span className="text-sm text-slate-400 group-hover:text-green-400 transition-colors">GitHub</span>
-            </a>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="h-[1px] w-8 bg-purple-500" />
+            <span className="uppercase tracking-widest text-xs font-bold text-purple-400">Connection Established</span>
           </div>
-
-          <a 
-            href="mailto:nirdesh.khanal@example.com"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-sky-500/20 border border-sky-500/50 rounded-full hover:bg-sky-500 hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] group"
-          >
-            <MessageSquare className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-            Say Hello
-          </a>
+          <h2 className="text-4xl md:text-6xl font-bold mb-10 text-white uppercase tracking-tighter">Initiate Contact</h2>
+          
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <p className="text-slate-400 text-lg leading-relaxed">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
+                Let's build something exceptional.
+              </p>
+              
+              <div className="flex flex-col gap-6">
+                <a href="mailto:khanalnirdsh0003@gmail.com" className="group flex items-center gap-4 text-slate-400 hover:text-white transition-colors">
+                  <div className="p-3 bg-white/5 rounded-full border border-white/5 group-hover:border-purple-500/50 transition-all">
+                    <Mail size={20} />
+                  </div>
+                  <span className="font-medium tracking-wide">khanalnirdsh0003@gmail.com</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-slate-400 hover:text-white transition-colors">
+                  <div className="p-3 bg-white/5 rounded-full border border-white/5 group-hover:border-purple-500/50 transition-all">
+                    <Linkedin size={20} />
+                  </div>
+                  <span className="font-medium tracking-wide">LinkedIn Profile</span>
+                </a>
+                
+                <a href="https://github.com/Nirdesh-khanal" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-slate-400 hover:text-white transition-colors">
+                  <div className="p-3 bg-white/5 rounded-full border border-white/5 group-hover:border-purple-500/50 transition-all">
+                    <Github size={20} />
+                  </div>
+                  <span className="font-medium tracking-wide">GitHub Repositories</span>
+                </a>
+              </div>
+            </div>
+            
+            <div className="glass-card p-10 border-white/5 flex flex-col justify-center items-center text-center">
+              <Terminal size={48} className="text-purple-500 mb-6" />
+              <h3 className="text-xl font-bold text-white uppercase tracking-widest mb-4">Remote Access</h3>
+              <p className="text-slate-400 text-sm mb-8">
+                Currently based in Nepal, working globally. 
+                Available for remote collaborations and engineering roles.
+              </p>
+              <a 
+                href="mailto:khanalnirdsh0003@gmail.com"
+                className="btn-primary w-full uppercase tracking-widest text-xs"
+              >
+                Send Encrypted Message
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -9,36 +9,44 @@ const Navbar = () => {
 
   const links = [
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Interests', href: '#interests' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <nav className="fixed w-full z-50 glass-nav border-b-0">
+    <nav className="fixed w-full z-50 glass-nav border-b-0 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0 font-bold text-xl text-sky-400 font-['Outfit'] tracking-wider">
-            NIRDESH<span className="text-purple-500">.</span>
+        <div className="flex items-center justify-between h-12">
+          <div className="flex-shrink-0 font-bold text-2xl text-white font-['Space_Grotesk'] tracking-tighter">
+            Nirdesh<span className="text-purple-500">.</span>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          
+          <div className="hidden md:flex items-center gap-12">
+            <div className="flex items-baseline space-x-10">
               {links.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="text-slate-400 hover:text-white uppercase text-xs font-bold tracking-[0.2em] transition-all duration-200"
                 >
                   {link.name}
                 </a>
               ))}
             </div>
+            
+            <a 
+              href="#contact" 
+              className="px-6 py-2 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold uppercase tracking-widest rounded-md transition-all duration-300 shadow-[0_0_20px_rgba(139,92,246,0.3)]"
+            >
+              Launch Console
+            </a>
           </div>
+
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -50,19 +58,26 @@ const Navbar = () => {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden glass-nav border-t border-white/10"
+          className="md:hidden glass-nav border-t border-white/5 bg-slate-950"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
             {links.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5"
+                className="text-gray-300 hover:text-white block px-3 py-4 rounded-md text-sm font-bold uppercase tracking-widest"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </a>
             ))}
+            <a 
+              href="#contact" 
+              className="block w-full py-4 bg-purple-600 text-white font-bold uppercase tracking-widest"
+              onClick={() => setIsOpen(false)}
+            >
+              Launch Console
+            </a>
           </div>
         </motion.div>
       )}
@@ -72,20 +87,21 @@ const Navbar = () => {
 
 const Footer = () => {
   return (
-    <footer className="glass-nav py-8 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <div className="text-gray-400 text-sm mb-4 md:mb-0">
-          © {new Date().getFullYear()} Nirdesh Khanal. All rights reserved.
+    <footer className="py-20 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="text-gray-500 text-xs font-medium uppercase tracking-[0.2em]">
+          © {new Date().getFullYear()} Nirdesh Khanal — Engineered in Nepal
         </div>
-        <div className="flex space-x-6">
-          <a href="https://github.com/Nirdesh-khanal" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-sky-400 transition-colors hover:scale-110">
-            <Github size={20} />
+        
+        <div className="flex space-x-10">
+          <a href="https://github.com/Nirdesh-khanal" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+            <Github size={18} />
           </a>
-          <a href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors hover:scale-110">
-            <Linkedin size={20} />
+          <a href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+            <Linkedin size={18} />
           </a>
-          <a href="mailto:nirdesh@example.com" className="text-gray-400 hover:text-sky-400 transition-colors hover:scale-110">
-            <Mail size={20} />
+          <a href="mailto:khanalnirdsh0003@gmail.com" className="text-gray-500 hover:text-white transition-colors">
+            <Mail size={18} />
           </a>
         </div>
       </div>
@@ -96,7 +112,6 @@ const Footer = () => {
 const Layout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col font-sans relative">
-      <Starfield />
       <Navbar />
       <main className="flex-grow">
         {children}

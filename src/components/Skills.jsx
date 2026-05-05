@@ -18,17 +18,20 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-slate-900/0 relative">
+    <section id="skills" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">Skills & Technologies</h2>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="h-[1px] w-8 bg-purple-500" />
+            <span className="uppercase tracking-widest text-xs font-bold text-purple-400">Tech Stack.log()</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-white uppercase tracking-tighter mb-20">Core Expertise</h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {skills.map((group, index) => (
               <motion.div
                 key={group.category}
@@ -36,26 +39,19 @@ const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className={`glass-card rounded-2xl p-6 hover:bg-white/5 transition-all duration-300 hover:shadow-[0_0_20px_rgba(56,189,248,0.15)] border-t border-white/10 ${
-                    index === 0 ? 'hover:border-sky-500/50' : 
-                    index === 1 ? 'hover:border-purple-500/50' : 
-                    'hover:border-green-500/50'
-                }`}
+                className="group"
               >
-                <h3 className={`text-xl font-semibold mb-6 border-b border-white/10 pb-2 ${
-                    index === 0 ? 'text-sky-400' :
-                    index === 1 ? 'text-purple-400' :
-                    'text-green-400'
-                }`}>{group.category}</h3>
-                <div className="flex flex-wrap gap-3">
+                <h3 className="text-xl font-bold mb-8 text-white uppercase tracking-widest border-b border-white/10 pb-4 group-hover:border-purple-500/50 transition-colors">
+                  {group.category}
+                </h3>
+                <div className="flex flex-col gap-4">
                   {group.items.map((skill) => (
-                    <span 
-                      key={skill}
-                      className="px-3 py-1 bg-white/5 rounded-full text-slate-300 text-sm border border-white/10 hover:text-white hover:border-white/30 transition-colors cursor-default hover:shadow-[0_0_10px_rgba(255,255,255,0.1)]"
-                    >
-                      {skill}
-                    </span>
+                    <div key={skill} className="flex items-center gap-3 group/item">
+                      <div className="w-1.5 h-1.5 bg-purple-500/50 rounded-full group-hover/item:bg-purple-500 transition-colors" />
+                      <span className="text-slate-400 text-sm font-medium group-hover/item:text-white transition-colors">
+                        {skill}
+                      </span>
+                    </div>
                   ))}
                 </div>
               </motion.div>

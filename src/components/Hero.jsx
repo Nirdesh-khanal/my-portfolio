@@ -1,54 +1,60 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download } from 'lucide-react';
-import resume from '../assets/portfolio/nirdeshkhanal.pdf';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Abstract Glowing Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-600/30 rounded-full blur-[100px] animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-sky-600/20 rounded-full blur-[100px] animate-pulse delay-1000" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <section id="hero" className="min-h-screen flex items-center justify-start relative overflow-hidden pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="glass-card p-8 md:p-12 rounded-3xl inline-block"
+          className="max-w-4xl"
         >
-          <span className="inline-block py-1 px-4 rounded-full bg-slate-900/50 border border-slate-700 text-sky-400 text-sm font-medium mb-6 backdrop-blur-sm">
-            Available for Work
-          </span>
-          <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-6 bg-gradient-to-r from-sky-400 via-purple-400 to-white bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
-            Nirdesh Khanal
+          {/* Tagline */}
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-[1px] w-12 bg-purple-500" />
+            <span className="uppercase tracking-[0.3em] text-xs font-bold text-slate-400">
+              FullStack Developer
+            </span>
+          </div>
+
+          {/* Name */}
+          <h1 className="text-7xl md:text-[10rem] font-bold leading-[0.85] tracking-tighter mb-12 uppercase">
+            <span className="block text-white">Nirdesh</span>
+            <span className="block text-gradient-violet-cyan">Khanal.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mb-10 font-light">
-            Crafting <span className="text-sky-400 font-semibold">Digital Universes</span> with Code
+
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-slate-400 max-w-xl mb-12 font-medium leading-relaxed">
+            Crafting high-performance digital systems from the heart of <span className="text-white italic">Nepal.</span>
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="#projects"
-              className="group relative inline-flex items-center justify-center px-8 py-3 rounded-full bg-sky-500/10 text-sky-400 font-semibold border border-sky-500/50 hover:bg-sky-500 hover:text-white transition-all duration-300 hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center">
-                View My Work
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
+
+          {/* Actions */}
+          <div className="flex flex-col sm:flex-row items-center gap-8">
+            <a href="#projects" className="btn-primary uppercase text-sm tracking-widest w-full sm:w-auto text-center">
+              Explore Projects
             </a>
-            <a 
-              href={resume}
-              download="nirdeshkhanal.pdf"
-              className="group relative inline-flex items-center justify-center px-8 py-3 rounded-full bg-purple-600/10 text-purple-400 font-semibold border border-purple-500/50 hover:bg-purple-600 hover:text-white transition-all duration-300 hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]"
-            >
-               <span className="relative z-10 flex items-center">
-                Download Resume
-                <Download className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
-               </span>
-            </a>
+            
+            <div className="flex items-center gap-6 text-slate-400">
+              <a href="https://github.com/Nirdesh-khanal" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <Github size={24} />
+              </a>
+              <a href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <Linkedin size={24} />
+              </a>
+              <a href="mailto:khanalnirdsh0003@gmail.com" className="hover:text-white transition-colors">
+                <Mail size={24} />
+              </a>
+            </div>
           </div>
         </motion.div>
+      </div>
+      
+      {/* Background Decorative Element */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[50%] h-full pointer-events-none opacity-20">
+        <div className="w-full h-full bg-gradient-to-l from-purple-500/20 to-transparent blur-[120px]" />
       </div>
     </section>
   );
