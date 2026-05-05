@@ -5,10 +5,26 @@ import { Github, ExternalLink, Folder } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "Expense Tracker",
-      description: "A comprehensive expense tracking application built with React and Django REST Framework. Features transaction management, category organization, and real-time budget updates.",
-      tech: ["React", "Django REST Framework", "Tailwind"],
-      github: "https://github.com/nirdesh-khanal/expense-tracker",
+      title: "Nexora",
+      description: "A modern web application built with cutting-edge technologies. (Description to be updated)",
+      tech: ["React", "Tailwind", "Node.js"],
+      github: "https://github.com/Nirdesh-khanal/Nexora",
+      live: "#",
+      featured: true
+    },
+    {
+      title: "EdgeChat",
+      description: "Edge chat is a real-time chat application where you can connect and chat endlessly with your friends.",
+      tech: ["React", "Socket.io", "Express"],
+      github: "https://github.com/Nirdesh-khanal/edgechat",
+      live: "#",
+      featured: true
+    },
+    {
+      title: "Expense Tracker Backend",
+      description: "A robust backend for an expense tracking application built with Django REST Framework. Features transaction management, category organization, and real-time budget updates.",
+      tech: ["Django", "Python", "PostgreSQL"],
+      github: "https://github.com/Nirdesh-khanal/expensetracker-backend",
       live: "#",
       featured: true
     },

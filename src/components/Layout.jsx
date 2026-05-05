@@ -78,10 +78,10 @@ const Footer = () => {
           © {new Date().getFullYear()} Nirdesh Khanal. All rights reserved.
         </div>
         <div className="flex space-x-6">
-          <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors hover:scale-110">
+          <a href="https://github.com/Nirdesh-khanal" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-sky-400 transition-colors hover:scale-110">
             <Github size={20} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors hover:scale-110">
+          <a href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors hover:scale-110">
             <Linkedin size={20} />
           </a>
           <a href="mailto:nirdesh@example.com" className="text-gray-400 hover:text-sky-400 transition-colors hover:scale-110">
