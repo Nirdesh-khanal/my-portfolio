@@ -32,7 +32,7 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-white/10" />
             <div className="absolute inset-0 flex items-center justify-center">
                <div className="text-center p-12">
-                  <div className="text-7xl font-bold text-white mb-2 uppercase tracking-tighter">03+</div>
+                  <div className="text-7xl font-bold text-white mb-2 uppercase tracking-tighter">01+</div>
                   <div className="text-xs font-bold uppercase tracking-[0.3em] text-purple-400">Years of Code</div>
                </div>
             </div>
