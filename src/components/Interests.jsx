@@ -33,7 +33,7 @@ const Interests = () => {
 
   return (
     <Section id="interests" title="Interests & Hobbies" subtitle="Beyond Code">
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-4">
         {interests.map((interest, index) => (
           <motion.div
             key={interest.title}

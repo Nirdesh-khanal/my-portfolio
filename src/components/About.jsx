@@ -4,7 +4,7 @@ import Section from "./Section";
 const About = () => {
   return (
     <Section id="about" title="About Me" subtitle="Who I Am">
-      <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <div className="grid lg:grid-cols-2 gap-20 items-center mt-2">
         <div className="relative">
           <div className="space-y-6 text-slate-400 leading-relaxed text-lg font-medium">
             <p>
@@ -38,7 +38,7 @@ const About = () => {
         </div>
 
         <div className="relative aspect-square max-w-md mx-auto lg:ml-auto w-full">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-white/10" />
+          <div className="absolute inset-0 bg-linear-to-br from-purple-500/20 to-cyan-500/20 border border-white/10" />
           <div className="absolute inset-0 flex flex-col items-center justify-center">
              <div className="w-48 h-48 rounded-full border-2 border-purple-500/30 overflow-hidden mb-8 bg-slate-900">
                   <img 
