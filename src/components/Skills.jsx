@@ -37,24 +37,24 @@ const Skills = () => {
 
   return (
     <Section id="skills" title="Core Expertise" subtitle="Tech Stack.log()">
-      <div className="grid md:grid-cols-3 gap-12">
+      <div className="grid md:grid-cols-3 gap-8">
         {skills.map((group, index) => (
           <motion.div
             key={group.category}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.08, duration: 0.4 }}
             className="group"
           >
-            <h3 className="text-xl font-bold mb-8 text-white uppercase tracking-widest border-b border-white/10 pb-4 group-hover:border-purple-500/50 transition-colors">
+            <h3 className="text-sm font-semibold mb-5 text-white uppercase tracking-widest border-b border-white/10 pb-2.5 group-hover:border-purple-500/50 transition-colors">
               {group.category}
             </h3>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               {group.items.map((skill) => (
-                <div key={skill} className="flex items-center gap-3 group/item">
-                  <div className="w-1.5 h-1.5 bg-purple-500/50 rounded-full group-hover/item:bg-purple-500 transition-colors" />
-                  <span className="text-slate-400 text-sm font-medium group-hover/item:text-white transition-colors">
+                <div key={skill} className="flex items-center gap-2.5 group/item">
+                  <div className="w-1 h-1 bg-purple-500/40 rounded-full group-hover/item:bg-purple-500 transition-colors" />
+                  <span className="text-slate-400 text-xs font-normal group-hover/item:text-white transition-colors">
                     {skill}
                   </span>
                 </div>

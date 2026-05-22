@@ -16,20 +16,20 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full z-50 glass-nav border-b-0 py-4 xl:pr-24 transition-all duration-500">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed w-full z-50 glass-nav border-b-0 py-2.5 xl:pr-24 transition-all duration-500">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32">
         <div className="flex items-center justify-between h-12">
-          <div className="flex-shrink-0 font-bold text-2xl text-white font-['Space_Grotesk'] tracking-tighter">
+          <div className="flex-shrink-0 font-bold text-xl text-white font-['Space_Grotesk'] tracking-tighter">
             Nirdesh Khanal<span className="text-purple-500">.</span>
           </div>
 
-          <div className="hidden md:flex items-center gap-12">
-            <div className="flex items-baseline space-x-10">
+          <div className="hidden md:flex items-center gap-10">
+            <div className="flex items-baseline space-x-8">
               {links.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-slate-400 hover:text-white uppercase text-xs font-bold tracking-[0.2em] transition-all duration-200"
+                  className="text-slate-400 hover:text-white uppercase text-[10px] font-semibold tracking-[0.22em] transition-all duration-200"
                 >
                   {link.name}
                 </a>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
             <a
               href="#contact"
-              className="px-6 py-2 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold uppercase tracking-widest rounded-md transition-all duration-300 shadow-[0_0_20px_rgba(139,92,246,0.3)]"
+              className="px-4.5 py-1.5 bg-purple-600 hover:bg-purple-500 text-white text-[10px] font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-[0_2px_10px_rgba(139,92,246,0.2)]"
             >
               Launch Console
             </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white block px-3 py-4 rounded-md text-sm font-bold uppercase tracking-widest"
+                className="text-gray-300 hover:text-white block px-3 py-3 rounded-md text-xs font-semibold uppercase tracking-widest"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
@@ -74,7 +74,7 @@ const Navbar = () => {
             ))}
             <a
               href="#contact"
-              className="block w-full py-4 bg-purple-600 text-white font-bold uppercase tracking-widest"
+              className="block w-full py-3 bg-purple-600 text-white text-xs font-semibold uppercase tracking-widest"
               onClick={() => setIsOpen(false)}
             >
               Launch Console
@@ -88,20 +88,20 @@ const Navbar = () => {
 
 const Footer = () => {
   return (
-    <footer className="py-20 border-t border-white/5 xl:pr-24 transition-all duration-500">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="text-gray-500 text-xs font-medium uppercase tracking-[0.2em]">
+    <footer className="py-10 border-t border-white/5 xl:pr-24 transition-all duration-500">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="text-gray-500 text-[10px] font-medium uppercase tracking-[0.2em]">
           © {new Date().getFullYear()} Nirdesh Khanal — Engineered in Nepal
         </div>
 
-        <div className="flex space-x-10">
+        <div className="flex space-x-8">
           <a
             href="https://github.com/Nirdesh-khanal"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-white transition-colors"
           >
-            <Github size={18} />
+            <Github size={16} />
           </a>
           <a
             href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/"
@@ -109,13 +109,13 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-white transition-colors"
           >
-            <Linkedin size={18} />
+            <Linkedin size={16} />
           </a>
           <a
             href="mailto:khanalnirdsh0003@gmail.com"
             className="text-gray-500 hover:text-white transition-colors"
           >
-            <Mail size={18} />
+            <Mail size={16} />
           </a>
         </div>
       </div>

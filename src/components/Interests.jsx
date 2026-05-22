@@ -37,22 +37,22 @@ const Interests = () => {
         {interests.map((interest, index) => (
           <motion.div
             key={interest.title}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
-            className="glass-card group p-8 border-white/5 hover:border-purple-500/30 transition-all duration-500 rounded-none"
+            transition={{ delay: index * 0.08, duration: 0.4 }}
+            className="glass-card group p-5 border-white/5 hover:border-purple-500/30 transition-all duration-500 rounded-none"
           >
-            <div className="mb-6 text-purple-500 group-hover:text-cyan-400 transition-colors">
-              {interest.icon}
+            <div className="mb-4 text-purple-500 group-hover:text-cyan-400 transition-colors">
+              {React.cloneElement(interest.icon, { size: 20 })}
             </div>
-            <div className="uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-2">{interest.tag}</div>
-            <h3 className="text-lg font-bold text-white uppercase tracking-tight mb-4">{interest.title}</h3>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+            <div className="uppercase tracking-widest text-[9px] font-semibold text-slate-500 mb-1">{interest.tag}</div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-tight mb-2">{interest.title}</h3>
+            <p className="text-slate-400 text-xs font-light leading-relaxed mb-4">
               {interest.description}
             </p>
-            <div className="flex items-center gap-2 text-purple-500 text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">
-              Read More <ChevronRight size={14} />
+            <div className="flex items-center gap-1.5 text-purple-500 text-[10px] font-semibold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">
+              Read More <ChevronRight size={12} />
             </div>
           </motion.div>
         ))}

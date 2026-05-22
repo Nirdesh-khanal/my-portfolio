@@ -7,36 +7,36 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="min-h-screen flex items-center pt-[135px]"
+      className="min-h-screen flex items-center pt-[80px] lg:pt-[100px] pb-12"
       showHeader={false}
     >
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-8 items-center w-full">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="max-w-4xl"
         >
           {/* Tagline */}
-          <div className="flex items-center gap-4 mb-8">
-            <div className="h-[1px] w-12 bg-purple-500" />
-            <span className="uppercase tracking-[0.3em] text-xs font-bold text-slate-400">
+          <div className="flex items-center gap-3 mb-5">
+            <div className="h-[1px] w-8 bg-purple-500" />
+            <span className="uppercase tracking-[0.25em] text-[10px] font-semibold text-slate-400">
               FullStack Developer
             </span>
           </div>
 
           {/* Name */}
-          <h1 className="text-6xl md:text-[8rem] xl:text-[10rem] font-bold leading-[0.85] tracking-tighter mb-12 uppercase">
+          <h1 className="text-4xl sm:text-6xl md:text-[5rem] lg:text-[6rem] xl:text-[6.5rem] font-bold leading-[1.0] md:leading-[0.95] tracking-tight mb-8 uppercase">
             <span className="block text-white">Nirdesh</span>
             <span className="block text-gradient-violet-cyan">Khanal.</span>
           </h1>
 
           {/* Description */}
-          <div className="text-xl md:text-2xl text-slate-400 max-w-xl mb-12 font-medium leading-relaxed">
+          <div className="text-base md:text-lg text-slate-400 max-w-lg mb-8 font-light leading-relaxed">
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.25 }}
             >
               Crafting high-performance digital systems from the heart of{" "}
               <span className="text-white italic">Nepal.</span>
@@ -44,22 +44,22 @@ const Hero = () => {
           </div>
 
           {/* Actions */}
-          <div className="flex flex-col sm:flex-row items-center gap-8">
+          <div className="flex flex-col sm:flex-row items-center gap-5">
             <a
               href="#projects"
-              className="btn-primary uppercase text-sm tracking-widest w-full sm:w-auto text-center"
+              className="btn-primary uppercase text-xs tracking-wider w-full sm:w-auto text-center"
             >
               Explore Projects
             </a>
 
-            <div className="flex items-center gap-6 text-slate-400">
+            <div className="flex items-center gap-5 text-slate-400">
               <a
                 href="https://github.com/Nirdesh-khanal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                <Github size={24} />
+                <Github size={20} />
               </a>
               <a
                 href="https://www.linkedin.com/in/nirdesh-khanal-76381835b/"
@@ -67,13 +67,13 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                <Linkedin size={24} />
+                <Linkedin size={20} />
               </a>
               <a
                 href="mailto:khanalnirdsh0003@gmail.com"
                 className="hover:text-white transition-colors"
               >
-                <Mail size={24} />
+                <Mail size={20} />
               </a>
             </div>
           </div>
@@ -81,30 +81,30 @@ const Hero = () => {
 
         {/* Terminal Element */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, x: 50 }}
+          initial={{ opacity: 0, scale: 0.95, x: 30 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
           className="hidden lg:block"
         >
           <div className="glass-card rounded-lg overflow-hidden border-white/10 shadow-2xl">
-            <div className="bg-white/5 px-4 py-3 border-b border-white/5 flex items-center gap-2">
+            <div className="bg-white/5 px-4 py-2 border-b border-white/5 flex items-center gap-2">
               <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                <div className="w-3 h-3 rounded-full bg-green-500/50" />
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
               </div>
-              <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest ml-4">
+              <div className="text-[9px] font-mono text-slate-500 uppercase tracking-widest ml-4">
                 bash — 80x24
               </div>
             </div>
             <motion.div
-              className="p-8 font-mono text-sm leading-relaxed"
+              className="p-6 font-mono text-xs leading-relaxed"
               initial="hidden"
               animate="visible"
               variants={{
                 visible: {
                   transition: {
-                    staggerChildren: 0.4,
+                    staggerChildren: 0.2,
                   },
                 },
               }}
@@ -119,7 +119,7 @@ const Hero = () => {
               </motion.div>
               <motion.div
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-                className="text-slate-400 mb-6 ml-6"
+                className="text-slate-400 mb-4 ml-6"
               >
                 nirdesh_khanal (FullStack Developer)
               </motion.div>
@@ -134,7 +134,7 @@ const Hero = () => {
               </motion.div>
               <motion.div
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-                className="grid grid-cols-2 gap-x-4 gap-y-1 text-slate-400 mb-6 ml-6"
+                className="grid grid-cols-2 gap-x-4 gap-y-1 text-slate-400 mb-4 ml-6"
               >
                 <span>react.js</span>
                 <span>django rest framework</span>
@@ -160,7 +160,7 @@ const Hero = () => {
                 passion. Based in Kathmandu, operating at lightspeed.
               </motion.div>
               <div className="flex gap-1 mt-4 ml-6">
-                <div className="w-2 h-4 bg-purple-500 animate-pulse" />
+                <div className="w-1.5 h-3.5 bg-purple-500 animate-pulse" />
               </div>
             </motion.div>
           </div>
